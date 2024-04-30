@@ -17,16 +17,16 @@ namespace irodhan.Servicios
         /// Método que carga el fichero al inicio de la aplicacion
         /// irodhan -> 30/04/2024
         /// </summary>
-        public void cargaInicial(string rutaFicheroCitas,List<PacienteDto> listaPacientesAntigua);
+        public void cargaInicial(string rutaFicheroCitas);
         /// <summary>
         /// Método que muestra las consultas del día indicado
         /// irodhan -> 30/04/2024
         /// </summary>
-        public void mostrarConsultas();
+        public void mostrarConsultas(List<PacienteDto> listaPacientesAntigua);
         /// <summary>
         /// Método que imprime en un fichero las consultas del día indicado
         /// irodhan -> 30/04/2024
         /// </summary>
-        public void imprimirConsultas();
+        public void imprimirConsultas(List<PacienteDto> listaPacientesAntigua);
     }
 }

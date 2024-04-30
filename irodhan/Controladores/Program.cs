@@ -35,7 +35,7 @@ namespace irodhan.Controladores
             int opcionSeleccionada = 0,opcion2=0;
             bool cerrarMenu=false;
             //Realizamos la carga inicial del archivo
-            fI.cargaInicial(rutaFicheroCitas,listaPacientes);
+            fI.cargaInicial(rutaFicheroCitas);
             //Creamos un bucle para el control de flujo de la aplicación
             try
             {
@@ -69,12 +69,12 @@ namespace irodhan.Controladores
                                 case 1:
                                     Console.WriteLine("[INFO] - Ha seleccionado la opción 1");
                                     Console.WriteLine("[INFO] - Ha seleccionado  mostrar consultas");
-                                    fI.mostrarConsultas();
+                                    fI.mostrarConsultas(listaPacientes);
                                     break;
                                 case 2:
                                     Console.WriteLine("[INFO] - Ha seleccionado la opción 2");
                                     Console.WriteLine("[INFO] - Ha seleccionado imprimir consultas");
-                                    fI.imprimirConsultas();
+                                    fI.imprimirConsultas(listaPacientes);
                                     break;
                                 default:
                                     Console.WriteLine("[INFO] - La opcion indicada anteriormente no coincide con ninguna opcion del menu");

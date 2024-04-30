@@ -20,10 +20,10 @@ namespace irodhan.Dtos
         string nombrePaciente = "aaaaa";
         string apellidosPaciente = "aaaaa";
         string especialidad = "aaaaa";
-        DateTime fchCita = DateTime.Now;
+        string fchCita = "31-12-9999 00:00:00";
         bool asistencia=false;
         //Constructores
-        public PacienteDto(long idPaciente, int numeroDniPaciente, char letraDniPaciente, string nombrePaciente, string apellidosPaciente, string especialidad, DateTime fchCita, bool asistencia)
+        public PacienteDto(long idPaciente, int numeroDniPaciente, char letraDniPaciente, string nombrePaciente, string apellidosPaciente, string especialidad, string fchCita, bool asistencia)
         {
             this.idPaciente = idPaciente;
             this.numeroDniPaciente = numeroDniPaciente;
@@ -44,7 +44,7 @@ namespace irodhan.Dtos
         public string NombrePaciente { get => nombrePaciente; set => nombrePaciente = value; }
         public string ApellidosPaciente { get => apellidosPaciente; set => apellidosPaciente = value; }
         public string Especialidad { get => especialidad; set => especialidad = value; }
-        public DateTime FchCita { get => fchCita; set => fchCita = value; }
+        public string FchCita { get => fchCita; set => fchCita = value; }
         public bool Asistencia { get => asistencia; set => asistencia = value; }
 
     }

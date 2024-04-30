@@ -13,7 +13,7 @@ namespace irodhan.Servicios
     /// </summary>
     internal class FicheroImplementacion : FicheroInterfaz
     {
-        public void cargaInicial(string rutaFicheroCitas,List<PacienteDto> lsitaPacientesAntigua)
+        public void cargaInicial(string rutaFicheroCitas)
         {
             if (File.Exists(rutaFicheroCitas))
             {
@@ -37,18 +37,20 @@ namespace irodhan.Servicios
             }
         }
 
-        public void imprimirConsultas()
+        public void imprimirConsultas(List<PacienteDto> listaPacientesAntigua)
         {
+
             PacienteDto paciente = new PacienteDto();
             Console.WriteLine("Elija una fecha (dd-MM-yyyy):");
-            
+            paciente.FchCita = Console.ReadLine();
         }
 
-        public void mostrarConsultas()
-        {   
+        public void mostrarConsultas(List<PacienteDto> listaPacientesAntigua)
+        {
+
             PacienteDto paciente = new PacienteDto();
             Console.WriteLine("Elija una fecha (dd-MM-yyyy):");
-
+            Console.WriteLine(paciente.ToString());
         }
     }
 }

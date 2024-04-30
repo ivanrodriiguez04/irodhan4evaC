@@ -29,14 +29,6 @@ namespace irodhan.Servicios
                 int numero=paciente.NumeroDniPaciente;
                 char letraValidar = paciente.LetraDniPaciente;
                 validacion=validarDni(numero,letraValidar);
-                if ()
-                {
-                    Console.WriteLine("Espere su turno para la consulta de Psicología en la sala de espera. Su especialista le avisará.");
-                }
-                else
-                {
-                    Console.WriteLine("No dispone de cita disponible");
-                }
             } while (!validacion);
             
         }
@@ -47,10 +39,7 @@ namespace irodhan.Servicios
             bool valido=false;
             char letra='O';
             //Calculamos la letra
-            Console.WriteLine(numero);
             int resto = numero % 23;
-            Console.WriteLine(resto);
-            Console.WriteLine(letraValidar);
 
             switch (resto) 
             {
@@ -139,25 +128,3 @@ namespace irodhan.Servicios
         }
     }
 }
-
-
-
-/*for (int f = 0; f < listaCliente.Count; f++)
-        {
-            for (int c = 0; c < listaCliente.Count - 1 - f; c++)
-            {
-                // ( cambiando el simbolo mayor que, cambiamos la condicion a cumplir )
-                if (listaCliente[c + 1].FechaLlegadaAControl > listaCliente[c].FechaLlegadaAControl)
-                {
-                    Vehiculo aux = listaCliente[c + 1];
-                    listaCliente[c + 1] = listaCliente[c];
-                    listaCliente[c] = aux;
-                }
-
-            }
-        }
-
-
-
-        return listaCliente;
-*/

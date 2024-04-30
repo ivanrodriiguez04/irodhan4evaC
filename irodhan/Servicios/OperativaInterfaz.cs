@@ -1,4 +1,5 @@
-﻿using System;
+﻿using irodhan.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,6 @@ namespace irodhan.Servicios
         /// Método que registra la llegada del paciente a la consulta
         /// irodhan -> 30/04/2024
         /// </summary>
-        public void registroLlegada();
+        public void registroLlegada(List<PacienteDto> listaPacientesAntigua);
     }
 }
